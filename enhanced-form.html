@@ -4,6 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color:#333;
+            color: #fff;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        dl dt {
+            font-weight: bold;
+        }
+        dl dd {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .registration-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .registration-form fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            color: #ffffff;
+        }
+        .registration-form legend {
+            font-weight: bold;
+        }
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .registration-form input, .registration-form select, .registration-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .registration-form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #218838;
+        }
+        video, audio {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        ol, ul {
+            margin-left: 20px;
+        }
+        ol li, ul li {
+            margin-bottom: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer audio {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .registration-form input, .registration-form select, .registration-form textarea {
+                width: 100%;
+            }
+            video, audio {
+                width: 100%;
+            }
+        }
+       .registration-form input[type="radio"],
+        .registration-form input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .registration-form input[type="radio"] + label,
+        .registration-form input[type="checkbox"] + label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -158,7 +279,7 @@
                     <tr>
                         <td>8</td>
                         <td>APIs</td>
-                        <td>APIs and Web Services</td>
+                        <td>APIs and Web Services, including Django Rest Framework</td>
                     </tr>
                     
                     <tr>
@@ -169,12 +290,12 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">Join us to kickstart your career in full-stack development!</td>
+                        <td colspan="3">We offer a bonus module of Entrepreneurship and personal development as part of the curriculum.</td>
                     </tr>
                 </tfoot>
             </table>
         </section><br><hr>
-        <section>
+        <section class="registration-form">
             <h1>Registration Form</h1>
             <form action="" method="">
                 <fieldset>
@@ -202,7 +323,7 @@
                         <option value="back-end">Back-End Development</option>
                     </select>
                     <label for="experience">Prior Experience:</label>
-                    <textarea id="experience" name="experience" placeholder="Describe your prior experience" rows="4" required></textarea>
+                    <textarea id="experience" name="experience" placeholder="Describe your prior experience" rows="4" autocomplete="on"></textarea>
                     <label for="start-date">Preferred Start Date:</label>
                     <input type="date" id="start-date" name="start-date" required>
                 </fieldset>
@@ -234,7 +355,7 @@
                 <button type="submit">Submit Registration</button>
             </form>
         </section>
-    </main>
+    </main><br><hr>
     <footer>
         <audio controls>
             <source src="Run-Free-chosic.com_.mp3" type="audio/mp3" autoplay loop>
